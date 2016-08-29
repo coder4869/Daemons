@@ -1,5 +1,6 @@
 #!/bin/bash
-#10002 is ip port
+#10002 is ip port, this is kill the process with port 10002
+#from : http://blog.csdn.net/reage11/article/details/8615236
 name=$(lsof -i:10002|tail -1|awk '"$1"!=""{print $2}')  
 if [ -z $name ]  
 then  
